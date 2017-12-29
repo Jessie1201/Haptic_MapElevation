@@ -1,6 +1,7 @@
-# Image Credits
-
-
+# API
+1. I used Google Map Elevaton API
+2. The fake cursor controlling code was modified based on the git repo. Main changes are about collect slop data and the way to change cursor speed.
+https://github.com/javierbyte/control-user-cursor
 
 # Style Templete
 The html/css is modified based on the templete:
