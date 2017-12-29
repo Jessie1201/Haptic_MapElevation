@@ -48,7 +48,7 @@ function displayLocationElevation(location, elevator, infowindow) {
 
 
 /* configure the fake cursor */
-/* this part is modified from https://github.com/javierbyte/control-user-cursor/blob/master/index.js */
+/* the following part is modified from https://github.com/javierbyte/control-user-cursor/blob/master/index.js */
 
 
 
@@ -191,7 +191,7 @@ function calculateNewCursor(newCursor) {
 
     let xyDiff;
 
-    if (objBehavior === 'REPEL') {
+    if (objBehavior === 'MOUNTAIN') {
       const angle = Math.atan2(objCenter.y - newCursor.y, objCenter.x - newCursor.x);
       const offset = objSize * importance / 1.4142;
 
@@ -199,7 +199,7 @@ function calculateNewCursor(newCursor) {
         x: Math.cos(angle) * (diff + offset),
         y: Math.sin(angle) * (diff + offset)
       };
-    } else if (objBehavior === 'ATTRACT') {
+    } else if (objBehavior === 'VALLEY') {
       xyDiff = {
         x: objCenter.x - (objCenter.x * importance + newCursor.x * (1 - importance)),
         y: objCenter.y - (objCenter.y * importance + newCursor.y * (1 - importance))
@@ -221,7 +221,7 @@ function calculateHover(newCursor) {
   C.elToTrackKeys.map(key => {
     const trackedObj = C.elToTrack[key];
 
-    if (trackedObj.behavior !== 'ATTRACT') {
+    if (trackedObj.behavior !== 'VALLEY') {
       return;
     }
 
@@ -276,7 +276,7 @@ function onClick() {
 
   if (!clickedEl) return;
 
-  clickedEl.innerHTML = clickedEl.innerHTML === ':D' ? 'GRAVITY!' : ':D';
+  clickedEl.innerHTML = clickedEl.innerHTML === ':D' ? 'VALLEY!' : ':D';
 }
 
 function onUpdateElementSizes() {
@@ -321,53 +321,53 @@ const kConfig = {
   basic: {
     el: {
       buttonToPrevent: {
-        behavior: 'REPEL',
-        innerHTML: 'Nope :P',
-        className: ['clickme', '-nope']
+        behavior: 'MOUNTAIN',
+        innerHTML: 'Mountain',
+        className: ['clickme', '-mountain']
       }
     },
     expoWeight: 1
   },
-  doble: {
+//  doble: {
+//    el: {
+//      buttonToPrevent: {
+//        behavior: 'MOUNTAIN',
+//        innerHTML: 'Nope :P',
+//        className: ['clickme', '-mountain', '-alt1']
+//      },
+//      buttonToPrevent2: {
+//        behavior: 'MOUNTAIN',
+//        innerHTML: 'Mountain',
+//        className: ['clickme', '-mountain', '-alt2']
+//      }
+//    },
+//    expoWeight: 2
+//  },
+  valley: {
     el: {
-      buttonToPrevent: {
-        behavior: 'REPEL',
-        innerHTML: 'Nope :P',
-        className: ['clickme', '-nope', '-alt1']
-      },
-      buttonToPrevent2: {
-        behavior: 'REPEL',
-        innerHTML: 'Nope :P',
-        className: ['clickme', '-nope', '-alt2']
-      }
-    },
-    expoWeight: 2
-  },
-  attract: {
-    el: {
-      buttonToAttract: {
-        behavior: 'ATTRACT',
-        innerHTML: 'Gravity!',
+      buttonToValley: {
+        behavior: 'VALLEY',
+        innerHTML: 'Valley',
         className: ['clickme']
       }
     },
     expoWeight: 2
   },
-  combined: {
-    el: {
-      buttonToPrevent: {
-        behavior: 'REPEL',
-        innerHTML: 'Nope :P',
-        className: ['clickme', '-nope', '-alt1']
-      },
-      buttonToAttract: {
-        behavior: 'ATTRACT',
-        innerHTML: 'Gravity!',
-        className: ['clickme', '-alt2']
-      }
-    },
-    expoWeight: 2
-  }
+//  combined: {
+//    el: {
+//      buttonToPrevent: {
+//        behavior: 'MOUNTAIN',
+//        innerHTML: 'Mountain',
+//        className: ['clickme', '-mountain', '-alt1']
+//      },
+//      buttonToValley: {
+//        behavior: 'VALLEY',
+//        innerHTML: 'Valley!',
+//        className: ['clickme', '-alt2']
+//      }
+//    },
+//    expoWeight: 2
+//  }
 };
 
 ControlUserCursor(kConfig.basic, true);
