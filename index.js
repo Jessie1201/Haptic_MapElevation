@@ -272,16 +272,16 @@ const kConfig = {
             buttonToMountain: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['clickme', '-mountain', '-alt1']
+                className: ['-mountain', '-alt1']
             },
             buttonToValley: {
                 behavior: 'VALLEY',
                 innerHTML: 'Valley',
-                className: ['clickme', '-alt2']
+                className: ['-valley', '-alt2']
             }
         },
         expoWeight: 2
-    },
+    }
     //  doble: {
     //    el: {
     //      buttonToMountain: {
