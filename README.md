@@ -3,6 +3,7 @@ HCI project that implemented Lécuyer’s pseudo-haptics interaction technique t
 
 # How to use it?
 Just move your cursor around the surface to feel whether it gives you haptic feelings like mountains, valleys and cliffs.
+But it doesn't work yet with touchscreen.
 
 # How it works?
 It makes the user's cursor invisible, then paint the new display cursor with JavaScript.

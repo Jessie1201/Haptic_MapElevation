@@ -42,15 +42,8 @@ function displayLocationElevation(location, elevator, infowindow) {
 }
 
 
-
-
-
-
-
 /* configure the fake cursor */
-/* the following part is modified from https://github.com/javierbyte/control-user-cursor/blob/master/index.js */
-
-
+/* modified from https://github.com/javierbyte/control-user-cursor/blob/master/index.js */
 
 // config
 
@@ -276,22 +269,27 @@ window.addEventListener('contextmenu', event => event.preventDefault());
 const kConfig = {
     basic: {
         el: {
-            buttonToPrevent: {
+            buttonToMountain: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['clickme', '-mountain']
+                className: ['clickme', '-mountain', '-alt1']
+            },
+            buttonToValley: {
+                behavior: 'VALLEY',
+                innerHTML: 'Valley',
+                className: ['clickme', '-alt2']
             }
         },
-        expoWeight: 1
+        expoWeight: 2
     },
     //  doble: {
     //    el: {
-    //      buttonToPrevent: {
+    //      buttonToMountain: {
     //        behavior: 'MOUNTAIN',
     //        innerHTML: 'Nope :P',
     //        className: ['clickme', '-mountain', '-alt1']
     //      },
-    //      buttonToPrevent2: {
+    //      buttonToMountain2: {
     //        behavior: 'MOUNTAIN',
     //        innerHTML: 'Mountain',
     //        className: ['clickme', '-mountain', '-alt2']
@@ -299,19 +297,19 @@ const kConfig = {
     //    },
     //    expoWeight: 2
     //  },
-    valley: {
-        el: {
-            buttonToValley: {
-                behavior: 'VALLEY',
-                innerHTML: 'Valley',
-                className: ['clickme']
-            }
-        },
-        expoWeight: 2
-    },
+//    valley: {
+//        el: {
+//            buttonToValley: {
+//                behavior: 'VALLEY',
+//                innerHTML: 'Valley',
+//                className: ['clickme']
+//            }
+//        },
+//        expoWeight: 2
+//    },
     //  combined: {
     //    el: {
-    //      buttonToPrevent: {
+    //      buttonToMountain: {
     //        behavior: 'MOUNTAIN',
     //        innerHTML: 'Mountain',
     //        className: ['clickme', '-mountain', '-alt1']
