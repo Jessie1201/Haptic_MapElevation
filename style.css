@@ -33,7 +33,7 @@ body {
     width: 88px;
     height: 88px;
     border-radius: 64px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
     text-align: center;
     line-height: 88px;
     text-transform: uppercase;
@@ -45,6 +45,7 @@ body {
     color: rgba(255,255,255,0.7);
 }
 
+/* set position for mountains */
 .-alt1 {
     position: fixed;
     top: 50%;
@@ -53,6 +54,24 @@ body {
     margin-left: 190px;
 }
 
+.-alt3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: 80px;
+    margin-left: -90px;
+}
+
+.-alt5 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: 510px;
+}
+
+/* set position for valleys */
+
 .-alt2 {
     position: fixed;
     left: 50%;
@@ -60,6 +79,31 @@ body {
     margin-left: 105px;
     margin-top: 160px;
 }
+
+.-alt4 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -270px;
+    margin-top: -260px;
+}
+
+.-alt6 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -330px;
+    margin-top: 100px;
+}
+
+.-alt8 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -550px;
+    margin-top: -170px;
+}
+
 
 
 /* for Google Map */

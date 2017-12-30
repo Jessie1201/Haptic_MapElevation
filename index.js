@@ -269,59 +269,59 @@ window.addEventListener('contextmenu', event => event.preventDefault());
 const kConfig = {
     basic: {
         el: {
-            buttonToMountain: {
+            buttonToMountain1: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
                 className: ['-mountain', '-alt1']
             },
-            buttonToValley: {
+            buttonToMountain2: {
+                behavior: 'MOUNTAIN',
+                innerHTML: 'Mountain',
+                className: ['-mountain', '-alt3']
+            },
+            buttonToMountain3: {
+                behavior: 'MOUNTAIN',
+                innerHTML: 'Mountain',
+                className: ['-mountain', '-alt5']
+            },
+            buttonToMountain4: {
+                behavior: 'MOUNTAIN',
+                innerHTML: 'Mountain',
+                className: ['-mountain', '-alt7']
+            },
+            buttonToMountain5: {
+                behavior: 'MOUNTAIN',
+                innerHTML: 'Mountain',
+                className: ['-mountain', '-alt9']
+            },
+            buttonToMountain6: {
+                behavior: 'MOUNTAIN',
+                innerHTML: 'Mountain',
+                className: ['-mountain', '-alt11']
+            },
+            buttonToValley1: {
                 behavior: 'VALLEY',
                 innerHTML: 'Valley',
                 className: ['-valley', '-alt2']
-            }
+            },
+            buttonToValley2: {
+                behavior: 'VALLEY',
+                innerHTML: 'Valley',
+                className: ['-valley', '-alt4']
+            },
+            buttonToValley3: {
+                behavior: 'VALLEY',
+                innerHTML: 'Valley',
+                className: ['-valley', '-alt6']
+            },
+            buttonToValley4: {
+                behavior: 'VALLEY',
+                innerHTML: 'Valley',
+                className: ['-valley', '-alt8']
+            },
         },
         expoWeight: 2
     }
-    //  doble: {
-    //    el: {
-    //      buttonToMountain: {
-    //        behavior: 'MOUNTAIN',
-    //        innerHTML: 'Nope :P',
-    //        className: ['clickme', '-mountain', '-alt1']
-    //      },
-    //      buttonToMountain2: {
-    //        behavior: 'MOUNTAIN',
-    //        innerHTML: 'Mountain',
-    //        className: ['clickme', '-mountain', '-alt2']
-    //      }
-    //    },
-    //    expoWeight: 2
-    //  },
-//    valley: {
-//        el: {
-//            buttonToValley: {
-//                behavior: 'VALLEY',
-//                innerHTML: 'Valley',
-//                className: ['clickme']
-//            }
-//        },
-//        expoWeight: 2
-//    },
-    //  combined: {
-    //    el: {
-    //      buttonToMountain: {
-    //        behavior: 'MOUNTAIN',
-    //        innerHTML: 'Mountain',
-    //        className: ['clickme', '-mountain', '-alt1']
-    //      },
-    //      buttonToValley: {
-    //        behavior: 'VALLEY',
-    //        innerHTML: 'Valley!',
-    //        className: ['clickme', '-alt2']
-    //      }
-    //    },
-    //    expoWeight: 2
-    //  }
 };
 
 ControlUserCursor(kConfig.basic, true);
