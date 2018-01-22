@@ -11,13 +11,13 @@ function initMap() {
         mapTypeId: 'terrain'
     });
     var elevator = new google.maps.ElevationService;
-    var infowindow = new google.maps.InfoWindow({map: map});
+    // if need info label, enable the following
+    //    var infowindow = new google.maps.InfoWindow({map: map});
 
-    // Add a listener for the click event. Display the elevation for the LatLng of
-    // the click inside the infowindow.
-    map.addListener('click', function(event) {
-        displayLocationElevation(event.latLng, elevator, infowindow);
-    });
+    // temporarily disable the click function
+    //    map.addListener('click', function(event) {
+    //        displayLocationElevation(event.latLng, elevator, infowindow);
+    //    });
 }
 
 function displayLocationElevation(location, elevator, infowindow) {
@@ -39,6 +39,21 @@ function displayLocationElevation(location, elevator, infowindow) {
             infowindow.setContent('Elevation service failed due to: ' + status);
         }
     });
+}
+
+
+// switch the label
+//function switcher() {
+//    document.getElementsByClassName("label").style.opacity = "0";
+//}
+//$('.switch').click(function() {
+//    $('.label').css({
+//        opacity:0;
+//    });
+//});
+function myFunction()
+{
+    document.getElementsByClassName('label').setAttribute("class", "style1");
 }
 
 
@@ -272,52 +287,52 @@ const kConfig = {
             buttonToMountain1: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['-mountain', '-alt1']
+                className: ['label', '-mountain', '-alt1']
             },
             buttonToMountain2: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['-mountain', '-alt3']
+                className: ['label', '-mountain', '-alt3']
             },
             buttonToMountain3: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['-mountain', '-alt5']
+                className: ['label', '-mountain', '-alt5']
             },
             buttonToMountain4: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['-mountain', '-alt7']
+                className: ['label', '-mountain', '-alt7']
             },
             buttonToMountain5: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['-mountain', '-alt9']
+                className: ['label', '-mountain', '-alt9']
             },
             buttonToMountain6: {
                 behavior: 'MOUNTAIN',
                 innerHTML: 'Mountain',
-                className: ['-mountain', '-alt11']
+                className: ['label', '-mountain', '-alt11']
             },
             buttonToValley1: {
                 behavior: 'VALLEY',
                 innerHTML: 'Valley',
-                className: ['-valley', '-alt2']
+                className: ['label', '-valley', '-alt2']
             },
             buttonToValley2: {
                 behavior: 'VALLEY',
                 innerHTML: 'Valley',
-                className: ['-valley', '-alt4']
+                className: ['label', '-valley', '-alt4']
             },
             buttonToValley3: {
                 behavior: 'VALLEY',
                 innerHTML: 'Valley',
-                className: ['-valley', '-alt6']
+                className: ['label', '-valley', '-alt6']
             },
             buttonToValley4: {
                 behavior: 'VALLEY',
                 innerHTML: 'Valley',
-                className: ['-valley', '-alt8']
+                className: ['label', '-valley', '-alt8']
             },
         },
         expoWeight: 2
