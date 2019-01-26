@@ -8,7 +8,9 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
         center: {lat: 63.203, lng: -150.4},  // Denali.
-        mapTypeId: 'terrain'
+        mapTypeId: 'terrain',
+        zoomControl: false,
+        gestureHandling: 'none'
     });
     var elevator = new google.maps.ElevationService;
     // if need info label, enable the following
